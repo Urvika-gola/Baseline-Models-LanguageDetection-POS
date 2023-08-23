@@ -1,0 +1,134 @@
+{
+  "tests": [
+    {
+      "name": "verb23rdperson public",
+      "setup": "sudo -H pip3 install -qr requirements.txt",
+      "run": "python -m pytest implementation/test_verb23rdperson.py -k test_public",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "verb23rdperson addtl",
+      "setup": "sudo -H pip3 install -qr requirements.txt",
+      "run": "python -m pytest implementation/test_verb23rdperson.py -k test_addtl",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "language detector 0.40",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_40",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector 0.50",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_50",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector 0.60",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_60",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector 0.70",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_70",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector 0.80",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_80",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector 0.90",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_public_90",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "language detector addtl 0.90",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_language_detector.py -k test_lang_addtl_90",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "pos tagger 0.10",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_pos_tagger.py -k test_pos_large_10",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "pos tagger 0.20",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_pos_tagger.py -k test_pos_large_20",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "pos tagger 0.30",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_pos_tagger.py -k test_pos_large_30",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "pos tagger 0.35",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "python -m pytest implementation/test_pos_tagger.py -k test_pos_large_35",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    }
+  ]
+}
