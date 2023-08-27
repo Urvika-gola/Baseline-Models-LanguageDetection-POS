@@ -26,11 +26,42 @@ def tagger(file):
         tokens = sentence.split(" ")
         pos_tags = []
         for token in tokens:
-            pos = "NN"
+            if token.lower() in ["a", "an", "the", "this", "that", "these", "those"]:
+                pos = "DT"
+            elif token.lower() in ["is", "am", "are", "was", "were", "have", "has", "had", "do", "does", "did", "will", "would", "shall", "should", "can", "could"]:
+                pos = "VB"
+            elif token.lower() in ["and", "or", "but", "yet", "so", "nor", "for"]:
+                pos = "CC"
+            elif token.lower() in ["i", "you", "he", "she", "myself", "themselves", "somebody"]:
+                pos = "PRON"
+            elif token.lower() in ["he", "she", "it", "they", "we", "you", "i", "him", "her", "us", "them", "me"]:
+                pos = "PRP"
+            elif token.lower() in ["in", "on", "at", "by", "with", "about", "against", "into", "through", "during",
+                                   "before", "after", "above", "below", "to", "from", "up", "down", "over", "under",
+                                   "again", "further", "then", "once"]:
+                pos = "IN"
+            elif token.endswith("ing") or token.endswith("ed"):
+                pos = "VERB"
+            elif token.endswith("ous") or token.endswith("ful"):
+                pos = "JJ"
+            elif token.endswith("ly"):
+                pos = "ADV"
+            elif token.istitle():
+                pos = "PROPN"
+            elif token.isnumeric() or token.replace(".", "").isnumeric() or token.isdigit():
+                pos = "CD"
+            elif token.endswith("ly"):
+                pos = "RB"
+            elif token is ",":
+                pos = ","
+            elif token is ".":
+                pos = "."
+            # elif "-" in token:
+            #     pos = "JJ"
+            else:
+                pos = "NN"
             pos_tags.append(pos)
         yield " ".join([f"{t}/{p}" for t, p in zip(tokens, pos_tags)])
-
-
 def run_tagger(f, f_gold, quiet=False):
     num_tokens = 0
     num_tokens_correct = 0
