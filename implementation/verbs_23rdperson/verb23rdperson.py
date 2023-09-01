@@ -18,11 +18,19 @@ def get_3rdperson(verb):
     #    We will test your implementation with new examples (and deduct points if you don't get them right)
     #    We won't give partial credit for this question.
 
-    return verb + 's'
+    # Remove any white spaces and convert to lowercase
+    verb = verb.strip().lower()
+    if re.search(r'(ss|x|ch|sh|o)$', verb):
+        return verb + 'es'
+    elif re.search(r'[^aeiou]y$',verb):
+        return re.sub('y$', 'ies', verb)
+    else:
+        return verb + 's'
 
 
 def process_file(file_path):
     for verb in read_verbs(file_path):
+
         yield verb, get_3rdperson(verb)
 
 
